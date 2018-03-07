@@ -1,0 +1,5 @@
+---
+- hosts: 10.100.65.119
+  tasks:
+  - name: create dir
+    file: path=/tmp/kuku/1 state=directory
