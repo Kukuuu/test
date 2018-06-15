@@ -1,0 +1,28 @@
+182  tar -zxvf mysql-5.7.22-linux-glibc2.12-x86_64.tar.gz
+  183  ll
+  184  mv mysql-5.7.22-linux-glibc2.12-x86_64 /usr/local/mysql
+  185  cd /usr/local/
+  186  ll
+  187  cd mysql/
+  188  ll
+  189  mkdir data
+  190  ll
+  191   chown -R mysql.mysql /usr/local/mysql
+  192  cp /home/payunoc/my.cnf /etc/
+  193  vim /etc/my.cnf
+  194  useradd mysql
+  195  pwd
+  196  ll
+  197  bin/mysqld --defaults-file=/etc/my.cnf --user=mysql --initialize
+  198  bin/mysqld --defaults-file=/etc/my.cnf --user=root &
+  199  ps -ef
+  200  ps -ef |grep mysql
+  201  which mysql
+  202  PATH=$PATH:/usr/local/mysql/bin
+  203  which mysql
+  204  mysql --socket=/usr/local/mysql/data/mysql.sock --user=root -p
+  205  cd bin/
+  206  ll
+  207  ./mysql_secure_installation --defaults-file=/etc/my.cnf
+  208  mysql -u root -p
+  209  history
